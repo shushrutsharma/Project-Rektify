@@ -1,0 +1,339 @@
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 7em;
+    align-items: center;
+    align-content: center;
+    /* background-color: #444444; */
+    height: 100vh;
+    padding-top: 1em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* background-color: #0366D6; */
+    margin-right: 2em;
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 3em;
+    margin-left: 2em;
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 2em;
+    width: 504px;
+    height: 597.34px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(88, 88, 88, 0.12);
+    border-radius: 10px;
+}
+
+.Login {
+    width: 97px;
+    height: 43px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    color: #444444;
+    margin-top: 0em;
+}
+
+.email {
+    width: 51px;
+    height: 24px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #444444;
+    margin-bottom: 13em;
+}
+
+.butt {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.emailBox {
+    width: 35em;
+    height: 41.28px;
+    background: #FCFCFC;
+    border: 1px solid #D8D8D8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.mail {
+    width: 51px;
+    height: 24px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #444444;
+    margin-bottom: 13em;
+}
+
+.mailBox {
+    width: 35em;
+    height: 41.28px;
+    background: #FCFCFC;
+    border: 1px solid #D8D8D8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.password {
+    width: 93px;
+    height: 24px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #444444;
+}
+
+.passwordBox {
+    width: 35em;
+    height: 41.28px;
+    background: #FCFCFC;
+    border: 1px solid #D8D8D8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+
+.button {
+    width: 23.4em;
+    height: 41.28px;
+    background: #0366D6;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 0.4em;
+}
+
+.signUp1 {
+    width: auto;
+    height: 19px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #444444;
+    opacity: 0.8;
+    margin: 0;
+    padding: 0%;
+    margin-right: 0.3em;
+}
+
+.signUp2 {
+    width: auto;
+    height: 19px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0366D6;
+    opacity: 0.8;
+    margin: 0;
+    padding: 0%;
+    text-decoration: none;
+}
+
+
+/*
+.fullLogo {
+position: absolute;
+width: 467.41px;
+height: 125.28px;
+left: 215px;
+top: 110.72px;
+}
+
+.homeVector {
+position: absolute;
+width: 377px;
+height: 377px;
+left: 235px;
+top: 250px;
+}
+
+.block {
+background-color: tomato;
+width: 100%;
+height: 100%;
+z-index: 4;
+} */
+
+.href {
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 30%;
+        padding-left: 0;
+    }
+    .box2 {
+        padding: 0%;
+        margin-top: 3em;
+    }
+    .box1 {
+        padding: 0%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 7%;
+        margin-top: 2em;
+        padding-bottom: 7%;
+    }
+    .box2 {
+        padding: 0%;
+        margin-top: 3em;
+        margin-left: 0%;
+    }
+    .box1 {
+        padding: 0%;
+    }
+    .fullLogo {
+        width: 249px;
+        height: 67px;
+    }
+    .homeVector {
+        width: 242px;
+        height: 242px;
+    }
+    .loginBox {
+        width: 337.9px;
+        height: 460.48px;
+    }
+    .emailBox {
+        width: 117%;
+        margin-bottom: 1em;
+    }
+    .passwordBox {
+        width: 117%;
+        margin-bottom: 1.5em;
+    }
+    .button {
+        width: 117%;
+    }
+    .Login {
+        width: 65px;
+        height: 29px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #444444;
+    }
+    .email {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        color: #444444;
+    }
+    .password {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        color: #444444;
+    }
+    .butt {
+        display: flex;
+        justify-content: center;
+        margin-left: 4em;
+    }
+    .signUp2 {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        /* margin-left: 0.2em;
+padding: -2em; */
+        text-decoration: none;
+    }
+    .signUp1 {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        margin-right: 0.5em;
+    }
+    .mailBox {
+        width: 117%;
+        margin-bottom: 1.5em;
+    }
+    .mail {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        color: #444444;
+    }
+}

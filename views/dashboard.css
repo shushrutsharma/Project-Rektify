@@ -1,0 +1,307 @@
+/* .nav {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    background: #0366D6;
+    box-shadow: 0px 4px 14px rgba(88, 88, 88, 0.25);
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background: #0366D6;
+    box-shadow: 0px 4px 14px rgba(88, 88, 88, 0.25);
+    padding-left: 3em;
+    padding-right: 2.5em;
+    z-index: 10;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #0366D6;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* ul {
+    list-style-type: none;
+}
+
+.navList ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 10%;
+}
+
+.navList li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 3rem;
+}
+
+.logo {
+    position: absolute;
+    width: 107.49px;
+    height: 29px;
+    left: 4%;
+    top: 20%;
+    float: right;
+} */
+
+.home {
+    width: 46px;
+    height: 19px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.aq {
+    width: 160px;
+    height: 19px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.logout {
+    width: 70px;
+    height: 19px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 100%;
+}
+
+.card1 {
+    position: absolute;
+    width: 93.3%;
+    min-height: 170px;
+    top: 13%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(88, 88, 88, 0.25);
+    border-radius: 10px;
+    float: left;
+    left: 3.4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    /* height: auto; */
+    overflow: hidden;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.sod {
+    position: absolute;
+    width: 84px;
+    height: 17px;
+    top: 7.7%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #444444;
+    float: right;
+    right: 5.3%;
+}
+
+.vec {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 68.83px;
+    float: right;
+    right: 3.5%;
+}
+
+.dp {
+    /* Ellipse 1 */
+    position: relative;
+    width: 26.38px;
+    height: 26.38px;
+    left: 14px;
+    top: 10px;
+    background: url(.jpg);
+}
+
+.name {
+    /* Sachin Tilokani, BBA London */
+    position: absolute;
+    width: 191px;
+    height: 17px;
+    left: 55px;
+    top: 0px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #444444;
+}
+
+.time {
+    /* 2hr Ago */
+    position: absolute;
+    width: 54px;
+    height: 17px;
+    top: 0px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #C4C4C4;
+    float: right;
+    right: 1.4%;
+}
+
+.heading {
+    /* TITLE OF THE DOUBT */
+    position: absolute;
+    height: 24px;
+    left: 14px;
+    top: 40px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+    color: #444444;
+}
+
+.text {
+    /* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu ultrices etiam volutpat lectus fermentum maecenas. Ac nisi id cursus sit vestibulum sed donec laoreet amet. */
+    position: absolute;
+    width: 97%;
+    height: 54px;
+    left: 14px;
+    top: 70px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #444444;
+    opacity: 0.7;
+}
+
+.ham {
+    display: none;
+}
+
+.pop {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links ul li {
+        text-align: center;
+    }
+    .navbar-links ul li a {
+        padding: 1.5rem 2rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    .sod {
+        float: right;
+        right: 8%;
+    }
+}

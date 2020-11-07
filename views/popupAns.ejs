@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/popupAns.css">
+    <link rel="shortcut icon" type="image/jpg" href="/Assets/logoWhite.svg">
+    <title>Recktify for Teachers</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="slide">
+            <form autocomplete="off" action="/teacher/solve/<%=doubt._id%>" method="post">
+            <div class="blue">
+                <div class="top">
+                    <a href="/teacher/dashboard"><img src="/Assets/retback.svg" alt="back" href="/teacher/dashboard" class="back"></a>
+                    <input type="submit" class="done" value="Done">
+                </div>
+                <div class="blueBt">
+                    <div class="question">
+                        <div class="info">
+                            <img src="/Assets/dp.svg" alt="photo" class="dp">
+                            <p class="id">
+                                <span class="name">
+                                    <%= doubt.email %>
+                                </span>
+                                <!-- <span class="time">2hrs Ago</span> -->
+                            </p>
+
+                        </div>
+                        <div class="qb">
+                            <p class="qbHead">UNANSWERED QUESTIONS</p>
+                            <p class="qbText"><%= doubt.doubt %></p>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <h1 class="ans">Answer</h1>
+                        <textarea class="textArea" name="ans"></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </form>
+            <div class="find">
+                <input type="text" id="ser" class="search" placeholder="Search for existing answers">
+                <img src="/Assets/search.svg" onclick="ansSearch()" alt="search" class="mag">
+
+            </div>
+            <div class="butt">
+                <div class="resultCard">
+                    <h1 class="resHead">ANSWERED QUESTIONS</h1>
+                    <p class="ansText">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu ultrices etiam volutpat lectus fermentum maecenas. Ac nisi id cursus sit vestibulum sed donec laoreet amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu ultrices etiam volutpat
+                        lectus fermentum maecenas. Ac nisi id cursus sit vestibulum sed donec laoreet amet.
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+    <script>
+      function ansSearch(){
+        var data = {
+            question: document.getElementById('ser').value
+        }
+        fetch('https://rektify-bot.azurewebsites.net/answer/search', {
+         method: 'POST',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' }
+            }).then(res => res.json())
+            .then(json => console.log(json));
+      }
+    </script>
+</body>
+
+</html>

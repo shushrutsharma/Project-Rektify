@@ -52,7 +52,7 @@
 
             </div>
             <div class="butt">
-                <div class="resultCard">
+                <div class="resultCard" style="display: none;">
                     <h1 class="resHead">ANSWERED QUESTIONS</h1>
                     <p class="ansText">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu ultrices etiam volutpat lectus fermentum maecenas. Ac nisi id cursus sit vestibulum sed donec laoreet amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu ultrices etiam volutpat
@@ -60,25 +60,37 @@
                     </p>
                 </div>
             </div>
-
-
-
         </div>
 
 
     </div>
     <script>
-      function ansSearch(){
+    function ansSearch(){
         var data = {
             question: document.getElementById('ser').value
         }
         fetch('https://rektify-bot.azurewebsites.net/answer/search', {
-         method: 'POST',
-        body: JSON.stringify(data),
-        headers: { 'Content-Type': 'application/json' }
-            }).then(res => res.json())
-            .then(json => console.log(json));
-      }
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: { 
+                'Content-Type': 'application/json' 
+            }
+        })
+        .then((res) => {
+            res.json().then((res) => {
+                var results = document.getElementsByClassName('butt')[0];
+                for (var i=0; i < res.answer.length; i++) {
+                    var resultCard = document.getElementsByClassName("resultCard")[0];
+                    resultCard = resultCard.cloneNode(true);
+                    resultCard.getElementsByClassName("ansText")[0].innerHTML = res.answer[i].answer.toString();
+                    resultCard.style.display = "block";
+                    // console.log(res.answer[i]);
+                    results.appendChild(resultCard);
+                }
+            });
+        })
+    }
+
     </script>
 </body>
 

@@ -1,0 +1,262 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 145px;
+    background: #F6F8FA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+div.chat {
+    margin-top: 145px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.chatinner {
+    width: 1000px;
+    margin-bottom: 150px;
+}
+
+div.userwrap, div.botwrap { 
+    width: 100%;
+    display: flex;  
+    justify-content: flex-end;
+}
+
+div.botwrap {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.usermsg, div.botmsg {
+    max-width: 350px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+    padding: 15px;
+    font-family: "Inter";
+    color: white;
+    box-shadow: 0px 0px 14px rgba(88, 88, 88, 0.25);
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: #FFFFFF;
+    background-color: #0366D6;
+}
+
+div.botmsg {
+    background-color: #F6F8FA;
+    color: rgba(68, 68, 68, 0.825);
+    text-align: left;   
+}
+
+div.ask {
+    background-image: url('./Assets/information.svg');
+    width: 25px;
+    height: 25px;
+    opacity: 0.2;
+}
+
+div.ask:hover {
+    opacity: 0.5;
+}
+
+div.footer {
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: #F6F8FA;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+div.msgbox {
+    width: 980px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 100px;
+    border: 0.1px solid #929292;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text] {
+    border: none;
+    width: 100%;
+    margin-left: 10px;
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    outline: none;
+}
+
+input[type=submit] {
+    background-image: url('./Assets/send.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 120px;
+    border-radius: 100px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.ask-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(68, 68, 68, 0.825);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+div.ask-form {
+    font-family: "Inter";
+    background-color: #fff;
+    box-shadow: 0px 4px 14px rgba(88, 88, 88, 0.25);
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+div.ask-form > button {
+    width: 25px;
+    height: 25px;
+    background-image: url('./Assets/letter-x.svg');
+    background-color: #fff;
+    border: none;
+    outline: none;
+    opacity: 0.5;
+    transform: rotate(-90deg);
+    transition: 0.2s;
+}
+
+div.ask-form > button:hover {
+    transform: rotate(90deg);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+h1 {
+    margin-top: 10px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #444444;
+}
+
+table {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #444444;
+    border-spacing: 20px;
+}
+
+td > input[type=email] {
+    width: 100%;
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    outline: none;
+    width: 350px;
+    height: 40px;
+    background: #FCFCFC;
+    border: 1px solid #D8D8D8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.25s;
+}
+
+td > input[type=email]:focus {
+    box-shadow: 0px 0px 14px rgba(50, 50, 50, 0.1);
+    transition: 0.25s;
+}
+
+td > textarea {
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    width: 350px;
+    min-height: 40px;
+    max-height: 175px;
+    background: #FCFCFC;
+    border: 1px solid #D8D8D8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    resize: vertical;
+    transition: 0.1s;
+    outline: none;
+}
+
+td > textarea:focus {
+    box-shadow: 0px 0px 14px rgba(50, 50, 50, 0.1);
+    transition: 0.1s;
+}
+
+center > input[type=submit] {
+    width: 300px;
+    height: 41.28px;
+    background: #0366D6;
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 20px;
+    color: #FFFFFF;
+    outline: none;
+    transition: 0.1s;
+
+}
+
+center > input[type=submit]:hover {
+    box-shadow: 0px 0px 14px rgba(100, 100, 100, 0.5);
+    transition: 0.1s;
+}

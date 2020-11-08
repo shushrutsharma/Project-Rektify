@@ -64,6 +64,7 @@ body {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 4em;
+    width: 80vw;
 }
 
 .question {
@@ -223,7 +224,7 @@ body {
 }
 
 .resultCard {
-    width: 92.1%;
+    width: 50vw;
     height: 140px;
     top: 440.46px;
     background: #FFFFFF;

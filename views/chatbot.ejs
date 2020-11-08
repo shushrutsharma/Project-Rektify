@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="/Assets/logoWhite.svg">
+    <link rel="stylesheet" href="/chatBot.css">
+    <title>Recktify | For Students</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <div>
+                <img src="/Assets/fullLogoStudents.svg" alt="logo" class="logo">
+            </div>
+        </div>
+        <div class="chat">
+            <div class="chatinner">
+                <!-- messages spawn here -->
+            </div>
+        </div>
+        <div class="footer">
+            <div class="msgbox" onclick="activateMsg();">
+                <form id="user-input" onsubmit="event.preventDefault(); sendQue();">
+                    <input type="text" id="user-input-text" placeholder="Type message here..." onfocus="activateMsg();" onfocusout="deactivateMsg();">
+                    <input type="submit" value="">
+                </form>
+            </div>
+            <script src="/chat.js"></script>
+            <script>
+                function activateMsg() {
+                    document.getElementById("user-input-text").focus();
+                    var msgbox = document.getElementsByClassName('msgbox')[0];
+                    msgbox.style.boxShadow = "0px 0px 14px rgba(88, 88, 88, 0.25)";
+                }
+
+                function deactivateMsg() {
+                    var msgbox = document.getElementsByClassName('msgbox')[0];
+                    msgbox.style.boxShadow = "none";
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="ask-popup">
+        <div class="ask-form">
+            <button onclick="deactivateQPopup()"></button>
+            <center>
+                <h1> Submit Question </h1>
+            </center>
+            <form autocomplete="off" action="/user/addDoubt" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            Email<br>
+                            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Question<br>
+                            <textarea placeholder="Type question here..." id="doubt" name="doubt" cols="30" rows="10" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
+                                <input type="submit" value="Submit">
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

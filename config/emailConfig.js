@@ -1,4 +1,5 @@
 let nodemailer = require("nodemailer");
+require('dotenv').config()
 let transporter = nodemailer.createTransport({
   service: "gmail",
    //host: "webmail.hpcl.in",
@@ -7,8 +8,8 @@ let transporter = nodemailer.createTransport({
 
   //add email details here
   auth: {
-    user: "", //emailID
-    pass: "", //Password
+    user: process.env.EMAIL_ADDR, //emailID
+    pass: process.env.EMAIL_PASS, //Password
   },
   tls: {
     rejectUnauthorized: false,
